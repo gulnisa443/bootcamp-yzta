@@ -129,6 +129,7 @@ Takım içinde roller netleştirilecek ve her üyenin sorumluluğu belirginleşe
 UI/UX tarafında wireframe süreci tamamlanarak taslak arayüz oluşturulacak. 
 Kullanıcı senaryoları detaylandırılacak.
 AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
-
+## Product Backlog URL
+https://trello.com/b/kOvMcJmt/migramind-product-backlog
 
 
