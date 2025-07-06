@@ -1,11 +1,11 @@
 # Takım ismi
 AI ve Veri Takım 196
 # Takım Elemanları
-Nursena Yılmaz: Product Owner
-Gül Nisa Akkoyun: Scrum Master
-Bahu Tongal: Developer
-Zeynep Genyüz: Developer
-Hasan Uğur Ertuğrul: Developer
+- **Nursena Yılmaz** – Product Owner  
+- **Gül Nisa Akkoyun** – Scrum Master  
+- **Bahu Tongal** – Developer  
+- **Zeynep Genyüz** – Developer  
+- **Hasan Uğur Ertuğrul** – Developer
 
 
 ## Ürün İle İlgili Bilgiler
