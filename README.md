@@ -111,24 +111,24 @@ Genel Değerlendirme:
 Bu sprint, ürünün temellerinin atıldığı ve ilerleyen sprintlerde üzerine inşa edilecek vizyonun belirlendiği bir hazırlık süreci olarak tamamlanmıştır.
 ## Sprint Retrospective
 *İyi Gidenler:
-**Ürün fikri ve proje vizyonu net, uygulanabilir ve kullanıcı odaklı şekilde tanımlandı.
-**Kullanıcıdan alınacak veriler etkili ve takip edilebilir şekilde belirlendi.
-**AI yaklaşımı konusunda literatür araştırması yapılarak teknik temel atıldı.
-**Takım içinde katkı sağlayan birey(ler), sorumluluk alarak ilerlemeye katkıda bulundu.
-**Sprint raporlama ve planlama süreçleri başlatıldı, proje kontrolü elde tutuldu.
+Ürün fikri ve proje vizyonu net, uygulanabilir ve kullanıcı odaklı şekilde tanımlandı.
+Kullanıcıdan alınacak veriler etkili ve takip edilebilir şekilde belirlendi.
+AI yaklaşımı konusunda literatür araştırması yapılarak teknik temel atıldı.
+Takım içinde katkı sağlayan birey(ler), sorumluluk alarak ilerlemeye katkıda bulundu.
+Sprint raporlama ve planlama süreçleri başlatıldı, proje kontrolü elde tutuldu.
 
 *Geliştirilebilecek Noktalar:
-**Takım üyeleri arasında görev dağılımı ve sorumluluk paylaşımı yapılmalı.
-**İletişim eksikliği nedeniyle planlanan işlerin büyük bölümü tamamlanamadı.
-**Daily Scrum süreci daha aktif ve düzenli şekilde yürütülmeli.
-**Sprint planlamaları, ekip kapasitesine daha uygun şekilde yapılmalı.
-**Wireframe ve görsel prototipleme süreci sprint içinde başlatılamadı.
+Takım üyeleri arasında görev dağılımı ve sorumluluk paylaşımı yapılmalı.
+İletişim eksikliği nedeniyle planlanan işlerin büyük bölümü tamamlanamadı.
+Daily Scrum süreci daha aktif ve düzenli şekilde yürütülmeli.
+Sprint planlamaları, ekip kapasitesine daha uygun şekilde yapılmalı.
+Wireframe ve görsel prototipleme süreci sprint içinde başlatılamadı.
 
 *Önümüzdeki Sprint İçin İyileştirme Hedefleri:
-**Takım içinde roller netleştirilecek ve her üyenin sorumluluğu belirginleşecek.
-**UI/UX tarafında wireframe süreci tamamlanarak taslak arayüz oluşturulacak.
-**Kullanıcı senaryoları detaylandırılacak.
-**AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
+Takım içinde roller netleştirilecek ve her üyenin sorumluluğu belirginleşecek.
+UI/UX tarafında wireframe süreci tamamlanarak taslak arayüz oluşturulacak. 
+Kullanıcı senaryoları detaylandırılacak.
+AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 
 
 
