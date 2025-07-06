@@ -84,6 +84,10 @@ Bu görevlerin her biri, sprint hedefimize ulaşma yolunda önemli bir adımı t
 Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 ## Daily Scrum
  Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
+ ## Sprint Board
+
+ ![Sprint 1 Panosu](./sprint1.png)
+ 
  ## Ürün Durumu
  *Uygulamanın teknik ve kullanıcı vizyonu belirlendi.
  *Kullanıcıdan toplanacak veriler (uyku, stres, ruh hali, ekran süresi, vb.) yapılandırıldı.
@@ -132,7 +136,7 @@ AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 ## Product Backlog URL
 https://trello.com/b/kOvMcJmt/yapay-zeka-destekli-migren-gunlugu-ve-tetikleyici-haritalama-sistemi-product-backlog
 
-![Sprint 1 Panosu](./sprint1.png)
+
 
 
 
