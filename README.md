@@ -131,6 +131,7 @@ Kullanıcı senaryoları detaylandırılacak.
 AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 ## Product Backlog URL
 https://trello.com/b/kOvMcJmt/yapay-zeka-destekli-migren-gunlugu-ve-tetikleyici-haritalama-sistemi-product-backlog
+
 ![Sprint 1 Panosu](./sprint1.png)
 
 
