@@ -133,3 +133,5 @@ AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 https://trello.com/b/kOvMcJmt/yapay-zeka-destekli-migren-gunlugu-ve-tetikleyici-haritalama-sistemi-product-backlog
 
 
+
+
