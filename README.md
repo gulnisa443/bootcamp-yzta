@@ -86,7 +86,7 @@ Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır
  Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
 ## Daily Scrum Docs
  
- [Sprint 1 Daily Scrum Chat Dökümanı](./sprint%201%20daily%20scrum%20chats.docx)
+ [Sprint 1 Daily Scrum Chat Dökümanı](https://docs.google.com/document/d/1fAwvrrNaeaoMYWECT5XE2z5l6PU0Yp5wLxIr7ckXSK4/edit?usp=drivesdk)
  ## Sprint Board
 
  ![Sprint 1 Panosu](./sprint1.png)
