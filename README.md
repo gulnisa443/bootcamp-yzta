@@ -81,7 +81,7 @@ Bu görevlerin her biri, sprint hedefimize ulaşma yolunda önemli bir adımı t
 ## Sprint İçinde Tamamlanması Tahmin Edilen Puan
 100 puan
 ## Puan Tamamlama Mantığı
-Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.Bu ilk sprint, ağırlıklı olarak keşif, planlama ve altyapı hazırlık görevlerine odaklandığından, her bir görevin karmaşıklığı, belirsizliği ve tahmini çabasına göre puanlama yapılmıştır.Hedefimiz, belirlenen 100 puanlık iş hacmini tamamlayarak projenin sağlam temellerini oluşturmaktı.
 ## Daily Scrum
  Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
  ## Sprint Board
