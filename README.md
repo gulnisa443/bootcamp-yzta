@@ -140,7 +140,7 @@ AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 https://trello.com/b/kOvMcJmt/yapay-zeka-destekli-migren-gunlugu-ve-tetikleyici-haritalama-sistemi-product-backlog
 # Sprint 2
 ## Sprint Notları
-Sprint 2 sürecinde ekipten yalnızca iki üye aktif olarak katkı sağlayabildi. Diğer üç ekip üyesi, kişisel sebeplerden dolayı sprint sürecine katılım gösteremedi. Bu durum ekip içi iş bölümü ve ilerleme hızını sınırlasa da belirlenen öncelikli hedefler üzerinde çalışmalar sürdürüldü.
+Sprint 2 sürecinde ekipten yalnızca iki üye aktif olarak katkı sağlayabildi. Diğer üç ekip üyesi, kişisel sebeplerden dolayı sprint sürecine katılım gösteremedi.Ekip üyelerinden biri, veri seti araştırması yapmaya çalışarak sürece katkı sağlamayı denedi.Bu durum ekip içi iş bölümü ve ilerleme hızını sınırlasa da belirlenen öncelikli hedefler üzerinde çalışmalar sürdürüldü.
 
 Sprint boyunca, kullanıcıların veri girişi yapabileceği frontend arayüzü geliştirildi. Migren risk skorunu hesaplamak için kural tabanlı sistemin ilk versiyonu oluşturuldu. Ayrıca bu sistemin backend ile entegrasyonu için altyapı çalışmaları başlatıldı. Backend kısmındaki bazı eksiklikler nedeniyle sistem tam olarak tamamlanamadı; bu eksikliklerin giderilmesi Sprint 3’te ana hedeflerden biri olacak.
 
