@@ -172,6 +172,9 @@ Ekip içi iletişim ve aktif çalışma sadece iki kişiyle sınırlı kaldı. B
 
 Sonuç olarak, sprint sonunda yapılan işler toplam 100 puan üzerinden yaklaşık 90 puan değerinde tamamlanmış olarak değerlendirildi. Bu, takımın kısıtlı sayıda aktif üye ile önemli ilerleme kaydettiğini göstermektedir. Eksik kalan entegrasyon ve yapay zeka modelleme çalışmaları önümüzdeki sprintte öncelikli hedefler olarak planlanmaktadır.
 ## Daily Scrum
+
+ [Sprint 2 Daily Scrum Chat Dökümanı](https://docs.google.com/document/d/1ugzCBdCddg7EIeZoCVgaJo-ht5e9gkYxAoYE8A8IAcI/edit?usp=sharing)
+ 
 ## Sprint Board
 
  ![Sprint 2 Panosu](./sprint2.png)
