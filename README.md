@@ -138,7 +138,70 @@ Kullanıcı senaryoları detaylandırılacak.
 AI modelinin temel versiyonu test verileriyle denenmeye başlanacak.
 ## Product Backlog URL
 https://trello.com/b/kOvMcJmt/yapay-zeka-destekli-migren-gunlugu-ve-tetikleyici-haritalama-sistemi-product-backlog
+# Sprint 2
+## Sprint Notları
+Sprint 2 sürecinde ekipten yalnızca iki üye aktif olarak katkı sağlayabildi. Diğer üç ekip üyesi, kişisel sebeplerden dolayı sprint sürecine katılım gösteremedi. Bu durum ekip içi iş bölümü ve ilerleme hızını sınırlasa da belirlenen öncelikli hedefler üzerinde çalışmalar sürdürüldü.
 
+Sprint boyunca, kullanıcıların veri girişi yapabileceği frontend arayüzü geliştirildi. Migren risk skorunu hesaplamak için kural tabanlı sistemin ilk versiyonu oluşturuldu. Ayrıca bu sistemin backend ile entegrasyonu için altyapı çalışmaları başlatıldı. Backend kısmındaki bazı eksiklikler nedeniyle sistem tam olarak tamamlanamadı; bu eksikliklerin giderilmesi Sprint 3’te ana hedeflerden biri olacak.
+
+Buna ek olarak, bir ekip üyesi sprintin ilerleyen günlerinde araştırma sürecine katılarak yapay zeka modellemesi için kullanılabilecek örnek bir veri seti paylaştı. Bu veri seti, kişiselleştirilmiş migren tetikleyici haritalarının çıkarılmasında ve erken risk tespiti için geliştirilecek olan makine öğrenmesi modeline temel oluşturması açısından değerlidir.
+
+Sprint 3’te, kural tabanlı sistemin backend ile tam entegrasyonu ve yapay zeka modeli üzerine derinlemesine çalışmalar yapılması planlanmaktadır.
+## Sprint İçinde Tamamlanması Tahmin Edilen Puan
+100 puan
+## Puan Tamamlama Mantığı
+Sprint 2’de planlanan toplam iş yükü 100 puan üzerinden değerlendirildi. Ekipten sadece iki kişi aktif olarak görev aldı; bu durum sprintin ilerleyişini etkiledi ancak belirlenen ana hedeflerin büyük kısmı başarıyla tamamlandı. Puanlama, yapılan işlerin kapsamı, tamamlanma durumu ve kalitesi göz önünde bulundurularak aşağıdaki şekilde gerçekleşti:
+
+Frontend Arayüzü (30 Puan):
+Kullanıcıların uyku, stres, su tüketimi, ekran süresi ve ruh hali gibi verileri kolayca girebileceği form tabanlı arayüz başarıyla geliştirildi ve test edildi. Arayüzün tamamlanması tam puan olarak değerlendirildi.
+
+Kural Tabanlı Sistem (30 Puan):
+Migren risk skorunu hesaplayan kural tabanlı sistem, sprint süresi içerisinde tam anlamıyla geliştirildi ve çalışır hale getirildi. Bu modülün tamamlanması da tam puan aldı.
+
+Backend Entegrasyonu (15 Puan):
+Backend tarafında Flask altyapısı kullanılarak temel veri alma ve işleme mekanizmaları kuruldu. Ancak, tam entegrasyon ve kalıcı veri kaydı henüz sağlanamadı. Bu nedenle, bu alandaki çalışmalar kısmi olarak puanlandırıldı.
+
+Yapay Zeka Kurgusu (10 Puan):
+Yapay zeka modeli için veri kurgusu ve temel planlama başlatıldı ancak kapsamlı geliştirme sprint sonrası aşamalar için planlandı. Bu yüzden bu alan sınırlı puan aldı.
+
+Veri Seti Araştırması (5 Puan):
+Ekip içinde veri seti araştırması görevi verilmesine rağmen, yalnızca bir kişiden tek seferlik dönüş yapıldı. Bu katkı sınırlı olduğundan tam puan verilmedi.
+
+Takım İçi Katılım ve İletişim (10 Puan):
+Ekip içi iletişim ve aktif çalışma sadece iki kişiyle sınırlı kaldı. Bu durum takım koordinasyonunu etkilediği için tam puan alınamadı.
+
+Sonuç olarak, sprint sonunda yapılan işler toplam 100 puan üzerinden yaklaşık 90 puan değerinde tamamlanmış olarak değerlendirildi. Bu, takımın kısıtlı sayıda aktif üye ile önemli ilerleme kaydettiğini göstermektedir. Eksik kalan entegrasyon ve yapay zeka modelleme çalışmaları önümüzdeki sprintte öncelikli hedefler olarak planlanmaktadır.
+## Daily Scrum
+## Sprint Board
+## Ürün Durumu
+Sprint 2 sonunda ürünün temel bileşenlerinde önemli ilerlemeler kaydedildi. Kullanıcıların günlük migren tetikleyici verilerini kolayca girebileceği frontend arayüzü tamamlandı ve stabil olarak çalışıyor. Bu arayüz, uyku süresi, stres seviyesi, su tüketimi, ekran kullanım süresi ve ruh hali gibi kritik verilerin hızlı ve kullanıcı dostu şekilde toplanmasını sağlıyor.
+
+Migren risk skorunu hesaplayan kural tabanlı sistem başarılı şekilde geliştirildi ve entegre edildi. Kullanıcılardan alınan veriler bu sistem üzerinden analiz edilerek kişiye özel risk puanları üretilmeye başlandı. Bu modül, ürünün temel işlevselliğini destekleyerek erken risk tespiti için altyapı oluşturdu.
+
+Backend tarafında Flask altyapısı ile temel veri alma ve işleme süreçleri başlatıldı. Ancak, tam veri saklama ve ileri seviye entegrasyonlar henüz tamamlanmadı. Bu kısımlar Sprint 3’te öncelikli olarak ele alınacak.
+
+Yapay zeka modeli için veri kurgusu ve ön hazırlık çalışmaları başladı. Henüz model geliştirme aşamasında olmasa da, gelecekteki kişiselleştirilmiş tetikleyici haritaları ve erken uyarı sistemleri için önemli bir temel oluşturuyor.
+
+Genel olarak, ürün sprint 2 sonunda kullanıcıların temel veri girişi ve risk hesaplama ihtiyaçlarını karşılayacak seviyeye geldi. Eksik kalan backend entegrasyonu ve yapay zeka modelleme çalışmaları ise sonraki sprintlerin odak noktası olarak belirlendi.
+## Sprint Review
+Frontend kısmı başarıyla tamamlandı ve kullanıcıdan veri alınabilir hale geldi.
+
+Kural tabanlı migren risk skoru hesaplama sistemi ayrı bir modül olarak çalışır durumda.
+
+Ancak backend tarafında henüz verinin işlenmesi ve kuralların uygulanması süreci tam entegre edilemedi.
+
+Aktif çalışan ekip üyeleri bu entegrasyonu Sprint 3'e taşıma kararı aldı.
+## Sprint Retrospective
+Az kişiyle çalışmamıza rağmen görev dağılımı net ve dengeliydi.
+
+Kural tabanlı sistemin sade bir yapıda kurulması işleri kolaylaştırdı.
+
+UI tarafında kullanıcıdan alınan ilk geri bildirimler doğrultusunda bazı input alanları sadeleştirildi.
+
+Sonraki sprintte veri analitiği ekranları, öneri sistemi ve kişisel tetikleyici öğrenimi başlatılacak.
+ Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.
+
+Sprint 4'te ise veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
 
 
 
