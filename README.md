@@ -189,6 +189,13 @@ Backend tarafında Flask altyapısı ile temel veri alma ve işleme süreçleri 
 Yapay zeka modeli için veri kurgusu ve ön hazırlık çalışmaları başladı. Henüz model geliştirme aşamasında olmasa da, gelecekteki kişiselleştirilmiş tetikleyici haritaları ve erken uyarı sistemleri için önemli bir temel oluşturuyor.
 
 Genel olarak, ürün sprint 2 sonunda kullanıcıların temel veri girişi ve risk hesaplama ihtiyaçlarını karşılayacak seviyeye geldi. Eksik kalan backend entegrasyonu ve yapay zeka modelleme çalışmaları ise sonraki sprintlerin odak noktası olarak belirlendi.
+
+<p align="center">
+  <img src="ana%20sayfa.png" width="250"/>
+  <img src="giriş.png" width="250"/>
+  <img src="grafikler.png" width="250"/>
+</p>
+
 ## Sprint Review
 Frontend kısmı başarıyla tamamlandı ve kullanıcıdan veri alınabilir hale geldi.
 
