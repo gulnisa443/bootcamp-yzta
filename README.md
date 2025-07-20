@@ -173,6 +173,9 @@ Ekip içi iletişim ve aktif çalışma sadece iki kişiyle sınırlı kaldı. B
 Sonuç olarak, sprint sonunda yapılan işler toplam 100 puan üzerinden yaklaşık 90 puan değerinde tamamlanmış olarak değerlendirildi. Bu, takımın kısıtlı sayıda aktif üye ile önemli ilerleme kaydettiğini göstermektedir. Eksik kalan entegrasyon ve yapay zeka modelleme çalışmaları önümüzdeki sprintte öncelikli hedefler olarak planlanmaktadır.
 ## Daily Scrum
 ## Sprint Board
+
+ ![Sprint 2 Panosu](./sprint2.png)
+ 
 ## Ürün Durumu
 Sprint 2 sonunda ürünün temel bileşenlerinde önemli ilerlemeler kaydedildi. Kullanıcıların günlük migren tetikleyici verilerini kolayca girebileceği frontend arayüzü tamamlandı ve stabil olarak çalışıyor. Bu arayüz, uyku süresi, stres seviyesi, su tüketimi, ekran kullanım süresi ve ruh hali gibi kritik verilerin hızlı ve kullanıcı dostu şekilde toplanmasını sağlıyor.
 
