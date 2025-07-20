@@ -172,6 +172,13 @@ Ekip içi iletişim ve aktif çalışma sadece iki kişiyle sınırlı kaldı. B
 
 Sonuç olarak, sprint sonunda yapılan işler toplam 100 puan üzerinden yaklaşık 90 puan değerinde tamamlanmış olarak değerlendirildi. Bu, takımın kısıtlı sayıda aktif üye ile önemli ilerleme kaydettiğini göstermektedir. Eksik kalan entegrasyon ve yapay zeka modelleme çalışmaları önümüzdeki sprintte öncelikli hedefler olarak planlanmaktadır.
 ## Daily Scrum
+Bu sprintte ekibin büyük kısmı aktif katılım gösteremediği için düzenli Daily Scrum toplantıları gerçekleştirilemedi.
+
+Takım içi iletişim, genellikle WhatsApp üzerinden yürütülmeye çalışıldı ancak mesajlara düzenli dönüş alınamadı.
+
+Aktif olan 2 ekip üyesi kendi aralarında günlük iş bölümünü doğrudan planlayarak ilerledi.
+
+Bu durum, bireysel sorumluluğu artırsa da takım içi sinerjinin oluşmasını engelledi.
 
  [Sprint 2 Daily Scrum Chat Dökümanı](https://docs.google.com/document/d/1ugzCBdCddg7EIeZoCVgaJo-ht5e9gkYxAoYE8A8IAcI/edit?usp=sharing)
  
@@ -212,9 +219,7 @@ Kural tabanlı sistemin sade bir yapıda kurulması işleri kolaylaştırdı.
 UI tarafında kullanıcıdan alınan ilk geri bildirimler doğrultusunda bazı input alanları sadeleştirildi.
 
 Sonraki sprintte veri analitiği ekranları, öneri sistemi ve kişisel tetikleyici öğrenimi başlatılacak.
- Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.
-
-Sprint 4'te ise veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
+ Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.Veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
 
 
 
