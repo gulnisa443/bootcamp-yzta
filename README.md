@@ -220,6 +220,71 @@ UI tarafında kullanıcıdan alınan ilk geri bildirimler doğrultusunda bazı i
 
 Sonraki sprintte veri analitiği ekranları, öneri sistemi ve kişisel tetikleyici öğrenimi başlatılacak.
  Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.Veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
+# Sprint 3
+## Sprint Notları
+Bu sprint, karşılaştığımız kısıtlı kaynaklara rağmen projemizin en kritik ve özgün kısımlarını hayata geçirdiğimiz bir dönem oldu. Başlangıçta 5 kişilik bir takım olsak da, sprintin büyük bir bölümünde yalnızca 2 kişi aktif olarak çalışabildik. Ancak bu durum, motivasyonumuzu düşürmek yerine, ana hedeflere daha da odaklanmamızı sağladı ve ekip olarak esnekliğimizi kanıtladık.
+
+Bu Sprintin En Önemli Başarımları:
+
+Veri Seti Oluşturulması: Projemizin kalbinde yer alan yapay zeka modelinin eğitimi için gerekli olan veri setini, dış kaynaklara bağlı kalmadan kendimiz oluşturduk. Bu, sistemimizin bireye özgü analizler yapabilme yeteneği için sağlam bir temel oluşturdu.
+
+Yapay Zeka Modeli Eğitimi: Oluşturduğumuz veri setini kullanarak, migren ataklarının tetikleyicilerini önceden tahmin edebilen ilk makine öğrenmesi modelimizi başarıyla eğittik. Bu, projenin en temel vaadini yerine getiren ve teknik olarak en zorlu adımını tamamlayan bir başarımdır.
+
+Arayüz (Frontend) ve Backend Entegrasyonu: Kullanıcıların veri girişi yapabileceği arayüz ile backend arasında sorunsuz bir entegrasyon kurduk. Artık kullanıcı verileri doğru bir şekilde toplanıp, eğitimini tamamladığımız model tarafından analiz edilmeye hazır.
+
+Prototip Geliştirilmesi: Tüm bu bileşenleri bir araya getirerek, çalışan ve işlevsel bir prototip oluşturduk. Kullanıcılar artık girdi sağlayabiliyor ve kişiselleştirilmiş tahmin sonuçlarını alabiliyorlar.
+## Sprint İçinde Tamamlanması Tahmin Edilen Puan
+100 puan
+## Puan Tamamlama Mantığı
+rojemizin tanımlanan tüm hedeflerine ve kapsamına ulaşıldığı için 100 üzerinden 100 puanlık bir tamamlanma oranıyla bu sprinti kapatmış bulunuyoruz. Bu yüksek başarı oranı, aşağıdaki kritik alanlarda elde ettiğimiz somut sonuçlara dayanmaktadır:
+
+Veri Giriş Arayüzü (Frontend) Geliştirmesi: Kullanıcıların migrenle ilişkili kritik verileri (ruh hali, uyku süresi, stres seviyesi, su tüketimi, ekran kullanımı ve ağrı durumu) kolayca ve yapılandırılmış bir şekilde sisteme girebildiği kullanıcı arayüzü tamamen geliştirildi ve işlevsel hale getirildi. Bu, projemizin veri toplama ayağının temelini oluşturmaktadır.
+
+Veri Seti Oluşturulması ve Yapay Zeka (AI) Modeli Eğitimi: Projemizin en özgün ve değerli bileşeni olan kişiselleştirilmiş migren tetikleyici haritalarının oluşturulması için gerekli olan veri seti, dışa bağımlı kalmadan kendi imkanlarımızla başarıyla oluşturuldu. Oluşturulan bu veri seti kullanılarak, migren ataklarının önceden anlaşılması ve önlenmesi hedefiyle yola çıktığımız yapay zeka modelimiz başarıyla eğitildi ve doğruluğu test edildi. Bu, "Uykusuzluk sonrası 24 saat içerisinde migren riskinin arttığı" gibi spesifik ve eyleme geçirilebilir içgörüler sunabilen sistemimizin kalbini oluşturmaktadır.
+
+Backend Geliştirme ve Entegrasyon: Frontend'den toplanan verileri işleyen, kural tabanlı sistemimizi içeren ve eğitilmiş yapay zeka modelimizle entegre olan backend altyapısı eksiksiz bir şekilde kuruldu ve tamamen entegre edildi. Bu entegrasyon sayesinde, sistem artık kullanıcı verilerini analiz ederek kişiye özel tetikleyici haritaları ve risk öngörüleri sunabilmektedir.
+
+Çalışan Prototipin Ortaya Çıkarılması: Yukarıda belirtilen tüm bileşenlerin sorunsuz bir şekilde bir araya getirilmesiyle, tamamen işlevsel ve uçtan uca çalışan bir prototip ortaya konuldu. Bu prototip, kullanıcıdan veri toplayabilen, bu verileri yapay zeka ile analiz edebilen ve anlamlı, eyleme geçirilebilir çıktılar sunabilen bir yapıya sahiptir. Bu, projenin başından beri hedeflediğimiz kişiselleştirilmiş ve öngörüye dayalı migren yönetim aracının somut bir göstergesidir.
+## Daily Scrum
+## Sprint Board Ekran Görüntüleri
+## Sprint Review
+Sprint 3 kapsamında projenin tamamlanması hedeflenmiş ve bu doğrultuda planlanan tüm ana görevler başarıyla tamamlanmıştır. Uygulama arayüzü, backend servisleri ve migren risk skoru hesaplayan kural tabanlı sistemin entegrasyonu başarıyla sağlanmıştır. Artık kullanıcılar, günlük veri girişlerini (örneğin uyku süresi, stres seviyesi, ekran süresi gibi) yapabilmekte, sistem bu verileri analiz ederek kişiselleştirilmiş risk skorlarını sunmaktadır.
+
+Ekip toplamda 5 kişiden oluşmasına rağmen, sprint sürecinde yalnızca 2 ekip üyesi aktif olarak çalışmalara katılmıştır. Diğer 3 ekip üyesi sprint boyunca herhangi bir teknik katkı veya görev teslimi gerçekleştirmemiştir. Geliştirme, test ve entegrasyon süreçleri aktif katılım gösteren 2 ekip üyesi tarafından yürütülmüştür.
+
+Sprint sonunda yapılan testlerde sistemin işlevsel olarak sorunsuz çalıştığı ve kullanıcı deneyimi açısından istenen hedeflere ulaşıldığı görülmüştür. Projenin temel versiyonu tamamlanmış ve demo sunumu yapılabilecek seviyeye getirilmiştir.
+
+Bu sprint, projenin genel tamamlanma süreci açısından kritik bir aşamaydı ve sınırlı katılıma rağmen hedefler başarıyla gerçekleştirilmiştir.
+## Ürün Durumu
+Sprint 3’ün sonunda uygulama başarıyla tamamlanmıştır. Kullanıcının veri girişi yapabildiği frontend arayüzü, backend ile tam entegre çalışmakta ve girilen veriler doğrultusunda migren risk skoru hesaplanabilmektedir.
+
+Kural tabanlı sistem üzerinden yapılan değerlendirme ile kullanıcıya risk seviyesi sunulmakta, temel yapay zeka algoritması üzerinden de ön analiz desteklenmektedir.
+
+Uygulama temel işlevselliğiyle çalışmakta olup, kullanıcı dostu tasarım, düzgün veri akışı ve puanlama sistemine sahiptir. Veri kaydı, risk hesaplama ve çıktı üretme özellikleri test edilerek doğrulanmıştır.
+
+Sonuç olarak, geliştirilen ürün; proje başında belirlenen temel işlevsel gereksinimleri karşılamakta ve ileriye dönük daha gelişmiş yapay zeka entegrasyonlarına da hazır bir altyapı sunmaktadır.
+## Sprint Retrospective
+Bu sprintte ürünün işlevsel olarak tamamlanması sağlanmış olsa da, ekip içi katılım ve sorumluluk paylaşımı açısından ciddi dengesizlikler yaşandı. 5 kişilik ekipten yalnızca 2 kişi sprint boyunca aktif olarak çalışmalara katıldı. Tüm geliştirme, test ve entegrasyon süreçleri bu iki kişi tarafından yürütüldü. Bu durum, iş yükünün adaletsiz dağılmasına ve sprint sürecinin belirli üyeler üzerinde yoğunlaşmasına neden oldu.
+
+Sprint hedefleri başarıyla gerçekleştirilmiş olsa da, ekip içi iletişimin eksikliği ve bazı üyelerin sürece katılım göstermemesi takım motivasyonunu olumsuz etkiledi. Özellikle Daily Scrum toplantılarına düzenli katılım sağlanamaması, ilerlemenin görünürlüğünü azalttı ve geri bildirim döngüsünü zayıflattı.
+
+Pozitif olarak değerlendirilen noktalar şunlardır:
+
+Aktif çalışan ekip üyeleri arasında güçlü bir iş birliği ve problem çözme becerisi gözlemlendi.
+
+Zaman yönetimi iyi yapıldı ve uygulama istenilen zamanda tamamlandı.
+
+Teknik beceri açısından ekip gelişim gösterdi; özellikle frontend-backend entegrasyonu başarılıydı.
+
+Geliştirilmesi gereken alanlar:
+
+Ekip içi görev dağılımı daha net yapılmalı ve herkesin katkı sağlaması teşvik edilmeli.
+
+Takip sistemleri (örneğin Trello) daha aktif kullanılmalı.
+
+Katılım göstermeyen üyelerin nedenleri erken tespit edilmeli ve alternatif görev planlamaları yapılmalı.
+
+Sprint 3, sonuç odaklı ve yüksek performansla tamamlanmış bir süreç oldu. Ancak ekip sinerjisi açısından daha dengeli ve sürdürülebilir bir çalışma kültürüne ihtiyaç olduğu açıkça görüldü.
 
 
 
