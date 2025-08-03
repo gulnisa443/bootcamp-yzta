@@ -65,21 +65,21 @@
     loadDashboardData();
   });
   async function loadDashboardData() {
-    // ✅ VERİLERİ BEKLE
+    //  VERİLERİ BEKLE
     const entries = await MigrenApp.DataManager.getEntries();
     const recentEntries = await MigrenApp.DataManager.getRecentEntries(30);
 
-    // 👋 Hoş geldin mesajı
+    //  Hoş geldin mesajı
     const user = MigrenApp.UserManager.getCurrentUser();
     const welcomeMessage = document.getElementById('welcomeMessage');
     if (user) {
       welcomeMessage.textContent = `Hoş Geldiniz, ${user.name || 'Kullanıcı'}!`;
     }
 
-    // 🧾 Toplam kayıt
+    //  Toplam kayıt
     document.getElementById('totalEntries').textContent = `${entries.length} kayıt`;
 
-    // 🕒 Son atak
+    //  Son atak
     const lastAttack = document.getElementById('lastAttack');
     if (entries.length > 0) {
       const lastEntry = entries[entries.length - 1];
@@ -89,8 +89,8 @@
       lastAttack.textContent = 'Henüz kayıt yok';
     }
 
-    // ⚡ En sık tetikleyici
-   // ⚡ En sık tetikleyici (backend üzerinden)
+
+   //  En sık tetikleyici (backend üzerinden)
   const primaryTrigger = document.getElementById('primaryTrigger');
   try {
    const summary = await MigrenApp.AnalysisManager.getSummary(30);
@@ -107,7 +107,7 @@
 }
 
 
-    // 🤖 AI önerisi (gerçek backend analizi ile)
+    //  AI önerisi (gerçek backend analizi ile)
 const aiRecommendation = document.getElementById('aiRecommendation');
 
 if (entries.length > 0) {
