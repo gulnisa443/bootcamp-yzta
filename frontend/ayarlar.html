@@ -73,23 +73,23 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await res.json();
 
       if (res.ok) {
-        alert("✅ Şifre başarıyla güncellendi.");
+        alert(" Şifre başarıyla güncellendi.");
         document.getElementById("password").value = "";
       } else {
-        console.error("❌ API Hatası:", result);
-        alert("⚠️ Şifre güncellenemedi: " + (result.detail || result.message));
+        console.error(" API Hatası:", result);
+        alert(" Şifre güncellenemedi: " + (result.detail || result.message));
       }
 
     } catch (err) {
-      console.error("❌ Fetch hatası:", err);
-      alert("❌ Bağlantı hatası.");
+      console.error(" Fetch hatası:", err);
+      alert(" Bağlantı hatası.");
     }
   });
 });
 </script>
 
 <script>
-  console.log("✅ Ayarlar sayfası JS yüklendi.");
+  console.log(" Ayarlar sayfası JS yüklendi.");
 </script>
 
 
