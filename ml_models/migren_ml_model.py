@@ -10,7 +10,7 @@ from imblearn.combine import SMOTETomek
 import warnings
 warnings.filterwarnings('ignore')
 
-print("🚀 DÜZELTILMIŞ MİGREN TAHMİN MODELİ V7")
+print(" DÜZELTILMIŞ MİGREN TAHMİN MODELİ V7")
 print("=" * 50)
 
 def safe_feature_engineering(df):
@@ -53,7 +53,7 @@ def safe_feature_engineering(df):
 
 def intelligent_data_balancing(X, y, strategy='moderate'):
     """Akıllı veri dengeleme - aşırı örnekleme yapmadan"""
-    print(f"🎯 Intelligent Data Balancing ({strategy})")
+    print(f" Intelligent Data Balancing ({strategy})")
     print("=" * 35)
     
     # Mevcut dağılımı göster
@@ -93,8 +93,8 @@ def intelligent_data_balancing(X, y, strategy='moderate'):
         return X_balanced, y_balanced
         
     except Exception as e:
-        print(f"⚠️ SMOTE hatası: {e}")
-        print("📌 Orijinal veri kullanılıyor...")
+        print(f" SMOTE hatası: {e}")
+        print(" Orijinal veri kullanılıyor...")
         return X, y
 
 def evaluate_models(X_train, X_test, y_train, y_test):
@@ -120,7 +120,7 @@ def evaluate_models(X_train, X_test, y_train, y_test):
     results = {}
     
     for name, model in models.items():
-        print(f"\n🤖 {name} eğitiliyor...")
+        print(f"\n {name} eğitiliyor...")
         
         # Cross-validation
         cv_scores = cross_val_score(
@@ -152,7 +152,7 @@ def evaluate_models(X_train, X_test, y_train, y_test):
 def main():
     try:
         # 1. Veri yükle
-        print("📊 Veri yükleniyor...")
+        print(" Veri yükleniyor...")
         train_df = pd.read_csv('migren_data_train.csv')
         test_df = pd.read_csv('migren_data_test.csv')
         
@@ -171,26 +171,26 @@ def main():
         y_test = test_df['Migren_Riski'].copy()
         
         # 4. Feature Engineering
-        print("\n🧬 Feature Engineering...")
+        print("\n Feature Engineering...")
         X_train_eng = safe_feature_engineering(X_train_raw)
         X_test_eng = safe_feature_engineering(X_test_raw)
         
         print(f"   Özellik sayısı: {len(feature_cols)} → {X_train_eng.shape[1]}")
         
         # 5. Scaling
-        print("\n⚖️ Feature Scaling...")
+        print("\n Feature Scaling...")
         scaler = StandardScaler()
         X_train_scaled = scaler.fit_transform(X_train_eng)
         X_test_scaled = scaler.transform(X_test_eng)
         
         # 6. Data Balancing
-        print("\n🎯 Data Balancing...")
+        print("\n Data Balancing...")
         X_train_balanced, y_train_balanced = intelligent_data_balancing(
             X_train_scaled, y_train, strategy='conservative'
         )
         
         # 7. Model Evaluation
-        print("\n🚀 Model Eğitimi ve Değerlendirmesi")
+        print("\n Model Eğitimi ve Değerlendirmesi")
         print("=" * 40)
         
         results = evaluate_models(
@@ -203,19 +203,19 @@ def main():
                              key=lambda x: results[x]['test_accuracy'])
         best_result = results[best_model_name]
         
-        print(f"\n🏆 EN İYİ MODEL: {best_model_name}")
+        print(f"\n EN İYİ MODEL: {best_model_name}")
         print("=" * 30)
         print(f"Test Accuracy: {best_result['test_accuracy']:.3f}")
         print(f"CV F1-Score: {best_result['cv_mean']:.3f}")
         
         # 9. Detaylı sonuçlar
-        print(f"\n📊 DETAYLI SONUÇLAR ({best_model_name})")
+        print(f"\n DETAYLI SONUÇLAR ({best_model_name})")
         print("=" * 35)
         print(classification_report(y_test, best_result['predictions']))
         
         # 10. Feature Importance
         if hasattr(best_result['model'], 'feature_importances_'):
-            print("\n⭐ ÖNEMLİ ÖZELLİKLER")
+            print("\n ÖNEMLİ ÖZELLİKLER")
             print("=" * 25)
             importances = best_result['model'].feature_importances_
             feature_names = X_train_eng.columns
@@ -225,7 +225,7 @@ def main():
             for i, idx in enumerate(indices, 1):
                 print(f"{i:2d}. {feature_names[idx]:<20}: {importances[idx]:.3f}")
         
-        print("\n✅ Model eğitimi başarıyla tamamlandı!")
+        print("\n Model eğitimi başarıyla tamamlandı!")
 
         # 10.1 Model ve scaler'ı kaydet
 
@@ -233,15 +233,15 @@ def main():
         os.makedirs(save_dir, exist_ok=True)
         joblib.dump(best_result['model'], os.path.join(save_dir, "migraine_model.pkl"))
         joblib.dump(scaler, os.path.join(save_dir, "scaler.pkl"))
-        print(f"\n✅ Model ve scaler '{save_dir}' klasörüne kaydedildi!")
+        print(f"\n Model ve scaler '{save_dir}' klasörüne kaydedildi!")
 
         return best_result['model'], scaler
         
     except FileNotFoundError as e:
-        print(f"❌ Dosya bulunamadı: {e}")
-        print("📌 Lütfen CSV dosyalarının mevcut dizinde olduğundan emin olun.")
+        print(f" Dosya bulunamadı: {e}")
+        print(" Lütfen CSV dosyalarının mevcut dizinde olduğundan emin olun.")
     except Exception as e:
-        print(f"❌ Beklenmeyen hata: {e}")
+        print(f" Beklenmeyen hata: {e}")
         import traceback
         traceback.print_exc()
 
