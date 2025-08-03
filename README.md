@@ -222,46 +222,84 @@ Sonraki sprintte veri analitiği ekranları, öneri sistemi ve kişisel tetikley
  Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.Veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
 # Sprint 3
 ## Sprint Notları
-Bu sprint, karşılaştığımız kısıtlı kaynaklara rağmen projemizin en kritik ve özgün kısımlarını hayata geçirdiğimiz bir dönem oldu. Başlangıçta 5 kişilik bir takım olsak da, sprintin büyük bir bölümünde yalnızca 2 kişi aktif olarak çalışabildik. Ancak bu durum, motivasyonumuzu düşürmek yerine, ana hedeflere daha da odaklanmamızı sağladı ve ekip olarak esnekliğimizi kanıtladık.
+Bu sprint, karşılaştığımız kısıtlı kaynaklara rağmen projemizin en kritik ve özgün bileşenlerini hayata geçirdiğimiz bir dönem oldu. Başlangıçta 5 kişilik bir ekip olarak yola çıkmamıza rağmen, sprint süresince aktif olarak yalnızca 2 kişi çalışmalara katkı sağlayabildi. Buna rağmen ekip içi motivasyon korunarak, sprint hedefleri başarıyla tamamlandı.
 
-Bu Sprintin En Önemli Başarımları:
+Sprint 3 Kapsamında Gerçekleştirilen Başarımlar:
 
-Veri Seti Oluşturulması: Projemizin kalbinde yer alan yapay zeka modelinin eğitimi için gerekli olan veri setini, dış kaynaklara bağlı kalmadan kendimiz oluşturduk. Bu, sistemimizin bireye özgü analizler yapabilme yeteneği için sağlam bir temel oluşturdu.
+Veri Seti Oluşturulması:
+Yapay zeka modelinin eğitimi için gerekli olan veri seti, dış kaynaklardan bağımsız bir şekilde, özgün olarak geliştirildi. Bu veri seti, bireye özgü analiz yapılabilmesi adına sağlam bir temel oluşturdu.
 
-Yapay Zeka Modeli Eğitimi: Oluşturduğumuz veri setini kullanarak, migren ataklarının tetikleyicilerini önceden tahmin edebilen ilk makine öğrenmesi modelimizi başarıyla eğittik. Bu, projenin en temel vaadini yerine getiren ve teknik olarak en zorlu adımını tamamlayan bir başarımdır.
+Yapay Zeka Modelinin Eğitimi:
+Rastgele oluşturulan bu özgün veri seti kullanılarak, migren ataklarını tahmin etmeye yönelik ilk makine öğrenmesi modeli başarıyla eğitildi. Bu adım, projenin teknik açıdan en zorlu ve aynı zamanda en önemli aşamalarından biri olarak değerlendirildi.
 
-Arayüz (Frontend) ve Backend Entegrasyonu: Kullanıcıların veri girişi yapabileceği arayüz ile backend arasında sorunsuz bir entegrasyon kurduk. Artık kullanıcı verileri doğru bir şekilde toplanıp, eğitimini tamamladığımız model tarafından analiz edilmeye hazır.
+Frontend ve Backend Entegrasyonu:
+Kullanıcıların veri girişi yapabileceği arayüz ile arka plan işlemlerini yöneten backend sistemi başarıyla entegre edildi. Artık kullanıcı verileri sistem tarafından doğru şekilde alınmakta ve analiz için hazır hale getirilmektedir.
 
-Prototip Geliştirilmesi: Tüm bu bileşenleri bir araya getirerek, çalışan ve işlevsel bir prototip oluşturduk. Kullanıcılar artık girdi sağlayabiliyor ve kişiselleştirilmiş tahmin sonuçlarını alabiliyorlar.
+İşlevsel Prototip Geliştirilmesi:
+Tüm bu çalışmaların sonucunda, kullanıcıların giriş sağlayabildiği, sistemin analiz gerçekleştirebildiği ve çıktıları sunduğu bir prototip tamamlandı. Böylece projenin temel işlevlerini yansıtan çalışan bir model elde edilmiş oldu.
+Not: Bu sprintte yapay zeka modeli, kural tabanlı sistem yerine rastgele oluşturulan veri seti ile eğitildi.
 ## Sprint İçinde Tamamlanması Tahmin Edilen Puan
 100 puan
 ## Puan Tamamlama Mantığı
-rojemizin tanımlanan tüm hedeflerine ve kapsamına ulaşıldığı için 100 üzerinden 100 puanlık bir tamamlanma oranıyla bu sprinti kapatmış bulunuyoruz. Bu yüksek başarı oranı, aşağıdaki kritik alanlarda elde ettiğimiz somut sonuçlara dayanmaktadır:
+Veri Seti Oluşturulması – 20 Puan
 
-Veri Giriş Arayüzü (Frontend) Geliştirmesi: Kullanıcıların migrenle ilişkili kritik verileri (ruh hali, uyku süresi, stres seviyesi, su tüketimi, ekran kullanımı ve ağrı durumu) kolayca ve yapılandırılmış bir şekilde sisteme girebildiği kullanıcı arayüzü tamamen geliştirildi ve işlevsel hale getirildi. Bu, projemizin veri toplama ayağının temelini oluşturmaktadır.
+Veri dış kaynaktan alınmadı, özgün şekilde oluşturuldu.
 
-Veri Seti Oluşturulması ve Yapay Zeka (AI) Modeli Eğitimi: Projemizin en özgün ve değerli bileşeni olan kişiselleştirilmiş migren tetikleyici haritalarının oluşturulması için gerekli olan veri seti, dışa bağımlı kalmadan kendi imkanlarımızla başarıyla oluşturuldu. Oluşturulan bu veri seti kullanılarak, migren ataklarının önceden anlaşılması ve önlenmesi hedefiyle yola çıktığımız yapay zeka modelimiz başarıyla eğitildi ve doğruluğu test edildi. Bu, "Uykusuzluk sonrası 24 saat içerisinde migren riskinin arttığı" gibi spesifik ve eyleme geçirilebilir içgörüler sunabilen sistemimizin kalbini oluşturmaktadır.
+Projenin temel yapı taşı olması nedeniyle yüksek önem taşıyor.
 
-Backend Geliştirme ve Entegrasyon: Frontend'den toplanan verileri işleyen, kural tabanlı sistemimizi içeren ve eğitilmiş yapay zeka modelimizle entegre olan backend altyapısı eksiksiz bir şekilde kuruldu ve tamamen entegre edildi. Bu entegrasyon sayesinde, sistem artık kullanıcı verilerini analiz ederek kişiye özel tetikleyici haritaları ve risk öngörüleri sunabilmektedir.
+Yapay Zeka Modelinin Eğitimi – 30 Puan
 
-Çalışan Prototipin Ortaya Çıkarılması: Yukarıda belirtilen tüm bileşenlerin sorunsuz bir şekilde bir araya getirilmesiyle, tamamen işlevsel ve uçtan uca çalışan bir prototip ortaya konuldu. Bu prototip, kullanıcıdan veri toplayabilen, bu verileri yapay zeka ile analiz edebilen ve anlamlı, eyleme geçirilebilir çıktılar sunabilen bir yapıya sahiptir. Bu, projenin başından beri hedeflediğimiz kişiselleştirilmiş ve öngörüye dayalı migren yönetim aracının somut bir göstergesidir.
+Rastgele veriyle de olsa ilk çalışan model başarıyla eğitildi.
+
+Teknik olarak en zorlu adımdı.
+
+Frontend–Backend Entegrasyonu – 20 Puan
+
+Kullanıcıdan veri alınıyor ve backend üzerinden işlenebiliyor.
+
+Uygulamanın canlı hale gelmesini sağlayan kritik adım.
+
+İşlevsel Prototip Oluşturulması – 25 Puan
+
+Kullanıcının giriş yapıp çıktı alabildiği çalışan bir yapı kuruldu.
+
+MVP (Minimum Viable Product) seviyesi sağlandı.
+
+Sprint Dokümantasyonu & Sunum – 5 Puan
+
+Sprint notları hazırlandı, gelişmeler kayda geçirildi.
+
+Sunum yapılacaksa +5 daha eklenebilir.
+
+ Toplam Tamamlanan Puan: 100 / 100
+Her ne kadar ekip 5 kişilik olsa da aktif çalışan 2 kişiyle bu puanlar verimlilik ve hedef odaklılıkla tamamlandı. Geri kalan takım üyeleri katkı sağlamadığı için bireysel dağılımda puanlar 2 kişiye eşit bölüştürülebilir:
+Kişi başı katkı: 50 puanlık iş.
 ## Daily Scrum
 ## Sprint Board Ekran Görüntüleri
 
  ![Sprint 3 Panosu](./sprint3.png)
  
 ## Sprint Review
-Sprint 3 kapsamında projenin tamamlanması hedeflenmiş ve bu doğrultuda planlanan tüm ana görevler başarıyla tamamlanmıştır. Uygulama arayüzü, backend servisleri ve migren risk skoru hesaplayan kural tabanlı sistemin entegrasyonu başarıyla sağlanmıştır. Artık kullanıcılar, günlük veri girişlerini (örneğin uyku süresi, stres seviyesi, ekran süresi gibi) yapabilmekte, sistem bu verileri analiz ederek kişiselleştirilmiş risk skorlarını sunmaktadır.
+Sprint 3, takım olarak hedeflediğimiz ürünün çekirdek bileşenlerini hayata geçirdiğimiz, en üretken ve teknik açıdan zorlu dönemlerden biri oldu. Sprintin başlangıcında takım 5 kişiden oluşmasına rağmen, sürecin neredeyse tamamı sadece 2 kişinin aktif katılımıyla yürütüldü. Diğer 3 takım üyesi, sprint boyunca hiçbir katkı sunmadı.
 
-Ekip toplamda 5 kişiden oluşmasına rağmen, sprint sürecinde yalnızca 2 ekip üyesi aktif olarak çalışmalara katılmıştır. Diğer 3 ekip üyesi sprint boyunca herhangi bir teknik katkı veya görev teslimi gerçekleştirmemiştir. Geliştirme, test ve entegrasyon süreçleri aktif katılım gösteren 2 ekip üyesi tarafından yürütülmüştür.
+Aktif olarak çalışan ekip üyeleri, bu sınırlı kaynaklara rağmen oldukça kritik adımları başarıyla tamamladı:
 
-Sprint sonunda yapılan testlerde sistemin işlevsel olarak sorunsuz çalıştığı ve kullanıcı deneyimi açısından istenen hedeflere ulaşıldığı görülmüştür. Projenin temel versiyonu tamamlanmış ve demo sunumu yapılabilecek seviyeye getirilmiştir.
+Veri seti, dış kaynaklara ihtiyaç duymadan sıfırdan oluşturuldu.
 
-Bu sprint, projenin genel tamamlanma süreci açısından kritik bir aşamaydı ve sınırlı katılıma rağmen hedefler başarıyla gerçekleştirilmiştir.
+Rastgele verilerle çalışan ilk yapay zeka modeli eğitildi.
+
+Kullanıcı arayüzü ve backend arasında sorunsuz bir entegrasyon sağlandı.
+
+Veri girişi, analiz ve tahmin almayı mümkün kılan çalışan bir prototip oluşturuldu.
+
+Bu çıktılar, ürünün temel işlevlerini ortaya koyarak MVP seviyesine ulaşmamızı sağladı. Kullanıcı veri girişleriyle modelin tahmin sunabilmesi, ürünün fonksiyonel hale geldiğini göstermektedir.
+
+Sprint sonunda hedeflenen tüm iş kalemleri tamamlandı ve toplam 100 puanlık işin tamamı başarıyla hayata geçirildi. Bu süreçte sadece 2 kişi aktif rol aldığı için bireysel katkı oldukça yüksekti.
+
 ## Ürün Durumu
 Sprint 3’ün sonunda uygulama başarıyla tamamlanmıştır. Kullanıcının veri girişi yapabildiği frontend arayüzü, backend ile tam entegre çalışmakta ve girilen veriler doğrultusunda migren risk skoru hesaplanabilmektedir.
 
-Kural tabanlı sistem üzerinden yapılan değerlendirme ile kullanıcıya risk seviyesi sunulmakta, temel yapay zeka algoritması üzerinden de ön analiz desteklenmektedir.
+Kullanıcı verileri, oluşturduğumuz rastgele veri setiyle eğitilen temel yapay zeka modeli üzerinden analiz edilmekte ve kişiselleştirilmiş risk tahminleri sunulmaktadır.
 
 Uygulama temel işlevselliğiyle çalışmakta olup, kullanıcı dostu tasarım, düzgün veri akışı ve puanlama sistemine sahiptir. Veri kaydı, risk hesaplama ve çıktı üretme özellikleri test edilerek doğrulanmıştır.
 
