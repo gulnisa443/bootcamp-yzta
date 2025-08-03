@@ -4,7 +4,7 @@ AI ve Veri Takım 196
 - **Nursena Yılmaz** – Product Owner  
 - **Gül Nisa Akkoyun** – Scrum Master  
 - **Bahu Tongal** – Developer (Pasif)
-- **Zeynep Genyüz** – Developer (Pasif)
+- **Zeynep Genyüz** – Developer 
 - **Hasan Uğur Ertuğrul** – Developer (Pasif)
 
 
@@ -222,7 +222,7 @@ Sonraki sprintte veri analitiği ekranları, öneri sistemi ve kişisel tetikley
  Sprint 3'te backend entegrasyonu ve kural tabanlı sistemin tam entegresi öncelik olacak.Veri temelli yapay zeka modeline geçiş planlanıyor. Böylece risk skorları sadece kurallara değil, öğrenilmiş örüntülere göre de hesaplanabilecek.
 # Sprint 3
 ## Sprint Notları
-Bu sprint, karşılaştığımız kısıtlı kaynaklara rağmen projemizin en kritik ve özgün bileşenlerini hayata geçirdiğimiz bir dönem oldu. Başlangıçta 5 kişilik bir ekip olarak yola çıkmamıza rağmen, sprint süresince aktif olarak yalnızca 2 kişi çalışmalara katkı sağlayabildi. Buna rağmen ekip içi motivasyon korunarak, sprint hedefleri başarıyla tamamlandı.
+Bu sprint, karşılaştığımız kısıtlı kaynaklara rağmen projemizin en kritik ve özgün bileşenlerini hayata geçirdiğimiz bir dönem oldu. Başlangıçta 5 kişilik bir ekip olarak yola çıkmamıza rağmen, sprint boyunca yazılım geliştirme süreçlerini iki ekip üyesi üstlendi. Diğer bir ekip üyesi ise proje için gerekli araştırmaları yaptı ve sunum materyalleri ile ekran videosunun düzenlenmesi gibi destek görevlerini başarıyla tamamladı. Bu şekilde, takım içindeki görev dağılımı etkin bir şekilde yönetildi ve sprint hedeflerine odaklanıldı. Böylelikçe ekip içi motivasyon korunarak, sprint hedefleri başarıyla tamamlandı.
 
 Sprint 3 Kapsamında Gerçekleştirilen Başarımlar:
 
@@ -299,7 +299,7 @@ Sonuç olarak, geliştirilen ürün; proje başında belirlenen temel işlevsel 
 </p>
 
 ## Sprint Review
-Sprint 3, takım olarak hedeflediğimiz ürünün çekirdek bileşenlerini hayata geçirdiğimiz, en üretken ve teknik açıdan zorlu dönemlerden biri oldu. Sprintin başlangıcında takım 5 kişiden oluşmasına rağmen, sürecin neredeyse tamamı sadece 2 kişinin aktif katılımıyla yürütüldü. Diğer 3 takım üyesi, sprint boyunca hiçbir katkı sunmadı.
+Sprint 3, takım olarak hedeflediğimiz ürünün çekirdek bileşenlerini hayata geçirdiğimiz, en üretken ve teknik açıdan zorlu dönemlerden biri oldu. Sprintin başlangıcında takım 5 kişiden oluşmasına rağmen, sürecin neredeyse tamamı sadece 2 kişinin aktif katılımıyla yürütüldü. Diğer 3 takım üyesinden 1’i, doğrudan yazılım geliştirme süreçlerinde yer almasa da, video düzenleme, sunum içeriği ve dış kaynak araştırması gibi destekleyici görevlerde sorumluluk aldı. Ancak kalan 2 üye sprint boyunca hiçbir katkı sunmadı.
 
 Aktif olarak çalışan ekip üyeleri, bu sınırlı kaynaklara rağmen oldukça kritik adımları başarıyla tamamladı:
 
@@ -316,9 +316,9 @@ Bu çıktılar, ürünün temel işlevlerini ortaya koyarak MVP seviyesine ulaş
 Sprint sonunda hedeflenen tüm iş kalemleri tamamlandı ve toplam 100 puanlık işin tamamı başarıyla hayata geçirildi. Bu süreçte sadece 2 kişi aktif rol aldığı için bireysel katkı oldukça yüksekti.
 
 ## Sprint Retrospective
-Bu sprintte ürünün işlevsel olarak tamamlanması sağlanmış olsa da, ekip içi katılım ve sorumluluk paylaşımı açısından ciddi dengesizlikler yaşandı. 5 kişilik ekipten yalnızca 2 kişi sprint boyunca aktif olarak çalışmalara katıldı. Tüm geliştirme, test ve entegrasyon süreçleri bu iki kişi tarafından yürütüldü. Bu durum, iş yükünün adaletsiz dağılmasına ve sprint sürecinin belirli üyeler üzerinde yoğunlaşmasına neden oldu.
+Sprint 3, ürünün işlevsel olarak tamamlandığı ve temel entegrasyonların başarıyla sağlandığı bir dönem oldu. 5 kişilik ekip içerisinde özellikle 2 geliştirici tüm yazılım geliştirme, test ve entegrasyon süreçlerinde aktif rol aldı. Teknik yük büyük oranda bu iki kişi tarafından taşındı.
 
-Sprint hedefleri başarıyla gerçekleştirilmiş olsa da, ekip içi iletişimin eksikliği ve bazı üyelerin sürece katılım göstermemesi takım motivasyonunu olumsuz etkiledi. Özellikle Daily Scrum toplantılarına düzenli katılım sağlanamaması, ilerlemenin görünürlüğünü azalttı ve geri bildirim döngüsünü zayıflattı.
+Ekipteki bir diğer üye ise video düzenleme, araştırma ve sunum materyallerinin hazırlanması gibi destekleyici görevleri üstlenerek sürece katkı sağladı. Ancak kalan iki üyeden beklenen katılım alınamadı. Bu durum iş yükünün dengesiz dağılmasına neden oldu.
 
 Pozitif olarak değerlendirilen noktalar şunlardır:
 
@@ -327,6 +327,10 @@ Aktif çalışan ekip üyeleri arasında güçlü bir iş birliği ve problem ç
 Zaman yönetimi iyi yapıldı ve uygulama istenilen zamanda tamamlandı.
 
 Teknik beceri açısından ekip gelişim gösterdi; özellikle frontend-backend entegrasyonu başarılıydı.
+
+Bir ekip üyesi, video düzenleme ve araştırma gibi destekleyici görevlerde görev alarak teknik sürece dolaylı katkı sağladı.
+
+
 
 Geliştirilmesi gereken alanlar:
 
