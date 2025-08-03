@@ -247,6 +247,9 @@ Backend Geliştirme ve Entegrasyon: Frontend'den toplanan verileri işleyen, kur
 Çalışan Prototipin Ortaya Çıkarılması: Yukarıda belirtilen tüm bileşenlerin sorunsuz bir şekilde bir araya getirilmesiyle, tamamen işlevsel ve uçtan uca çalışan bir prototip ortaya konuldu. Bu prototip, kullanıcıdan veri toplayabilen, bu verileri yapay zeka ile analiz edebilen ve anlamlı, eyleme geçirilebilir çıktılar sunabilen bir yapıya sahiptir. Bu, projenin başından beri hedeflediğimiz kişiselleştirilmiş ve öngörüye dayalı migren yönetim aracının somut bir göstergesidir.
 ## Daily Scrum
 ## Sprint Board Ekran Görüntüleri
+
+ ![Sprint 3 Panosu](./sprint3.png)
+ 
 ## Sprint Review
 Sprint 3 kapsamında projenin tamamlanması hedeflenmiş ve bu doğrultuda planlanan tüm ana görevler başarıyla tamamlanmıştır. Uygulama arayüzü, backend servisleri ve migren risk skoru hesaplayan kural tabanlı sistemin entegrasyonu başarıyla sağlanmıştır. Artık kullanıcılar, günlük veri girişlerini (örneğin uyku süresi, stres seviyesi, ekran süresi gibi) yapabilmekte, sistem bu verileri analiz ederek kişiselleştirilmiş risk skorlarını sunmaktadır.
 
