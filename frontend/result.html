@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonuçlar | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="result-section">
+      <div class="result-card">
+        <h1>AI Analiz Sonucu</h1>
+        <div class="ai-result" id="aiResult">
+          Verileriniz analiz ediliyor...
+        </div>
+        <a href="dashboard.html" class="cta-button">Dashboard'a Dön</a>
+      </div>
+    </section>
+  </main>
+    
+    <script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    const aiResult = document.getElementById('aiResult');
+    try {
+      const mlResult = await MigrenApp.AnalysisManager.getSummary();
+
+      if (!mlResult || !mlResult.recommendations || mlResult.recommendations.length === 0) {
+        aiResult.innerHTML = 'Henüz veri girişi yapılmamış. <a href="panel.html">Günlük giriş yapmak için tıklayın</a>.';
+        return;
+      }
+
+      const resultHTML = `
+        <p><strong>Toplam Giriş:</strong> ${mlResult.total_entries}</p>
+        <p><strong>Risk Skoru:</strong> ${mlResult.risk_score} / 9</p>
+        <p><strong>Risk Seviyesi:</strong> ${mlResult.risk_level}</p>
+        <p><strong>Güven:</strong> ${(mlResult.confidence * 100).toFixed(1)}%</p>
+        <hr>
+        <p><strong>AI Tavsiyeleri:</strong></p>
+        <ul>${mlResult.recommendations.map(r => `<li>${r}</li>`).join('')}</ul>
+      `;
+
+      aiResult.innerHTML = resultHTML;
+
+    } catch (error) {
+      console.error("Analiz hatası:", error);
+      aiResult.innerHTML = 'Analiz alınamadı. Lütfen tekrar deneyin.';
+    }
+  });
+</script>
+
+
+  </script>
+</body>
+</html> 

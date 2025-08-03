@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="dashboard-section">
+      <h1 id="welcomeMessage">Hoş Geldiniz!</h1>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-icon">🧠</div>
+          <h3>Son Atak</h3>
+          <p id="lastAttack">Yükleniyor...</p>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">📅</div>
+          <h3>Toplam Günlük</h3>
+          <p id="totalEntries">Yükleniyor...</p>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">📈</div>
+          <h3>En Sık Tetikleyici</h3>
+          <p id="primaryTrigger">Yükleniyor...</p>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">💡</div>
+          <h3>AI Önerisi</h3>
+          <ul id="aiRecommendation">Yükleniyor...</ul>
+        </div>
+      </div>
+      <div class="cta-center"><a href="panel.html" class="cta-button">Yeni Günlük Girişi Yap</a></div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    loadDashboardData();
+  });
+  async function loadDashboardData() {
+    // ✅ VERİLERİ BEKLE
+    const entries = await MigrenApp.DataManager.getEntries();
+    const recentEntries = await MigrenApp.DataManager.getRecentEntries(30);
+
+    // 👋 Hoş geldin mesajı
+    const user = MigrenApp.UserManager.getCurrentUser();
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    if (user) {
+      welcomeMessage.textContent = `Hoş Geldiniz, ${user.name || 'Kullanıcı'}!`;
+    }
+
+    // 🧾 Toplam kayıt
+    document.getElementById('totalEntries').textContent = `${entries.length} kayıt`;
+
+    // 🕒 Son atak
+    const lastAttack = document.getElementById('lastAttack');
+    if (entries.length > 0) {
+      const lastEntry = entries[entries.length - 1];
+      const daysAgo = Math.floor((new Date() - new Date(lastEntry.created_at)) / (1000 * 60 * 60 * 24));
+      lastAttack.textContent = daysAgo === 0 ? 'Bugün' : `${daysAgo} gün önce`;
+    } else {
+      lastAttack.textContent = 'Henüz kayıt yok';
+    }
+
+    // ⚡ En sık tetikleyici
+   // ⚡ En sık tetikleyici (backend üzerinden)
+  const primaryTrigger = document.getElementById('primaryTrigger');
+  try {
+   const summary = await MigrenApp.AnalysisManager.getSummary(30);
+  const triggerMap = {
+    bright_light: "Parlak Işık",
+    irregular_meals: "Düzensiz Beslenme",
+    weather_change: "Hava Değişikliği"
+  };
+  const label = triggerMap[summary.primary_trigger] || "Belirlenemedi";
+  primaryTrigger.textContent = label;
+} catch (e) {
+  console.error("Tetikleyici alınamadı:", e);
+  primaryTrigger.textContent = "Yüklenemedi";
+}
+
+
+    // 🤖 AI önerisi (gerçek backend analizi ile)
+const aiRecommendation = document.getElementById('aiRecommendation');
+
+if (entries.length > 0) {
+  try {
+    const summary = await MigrenApp.AnalysisManager.getSummary(30);
+    const suggestions = summary.recommendations;
+
+    aiRecommendation.innerHTML = suggestions.length > 0
+      ? suggestions.map(s => `<li>${s}</li>`).join("")
+      : "<li>Her şey yolunda!</li>";
+
+  } catch (error) {
+    console.error("AI önerisi alınamadı:", error);
+    aiRecommendation.textContent = "AI önerisi alınamadı.";
+  }
+} else {
+  aiRecommendation.textContent = "Veri girişi yapın";
+}
+
+  }
+</script>
+
+</body>
+</html> 

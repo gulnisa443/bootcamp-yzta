@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="profile-section">
+      <div class="profile-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profil" class="profile-avatar">
+        <h1 id="userName">Yükleniyor...</h1>
+        <p id="userEmail">Yükleniyor...</p>
+        <div class="profile-info">
+          <div><strong>Kayıt Tarihi:</strong> <span id="userCreatedAt">Yükleniyor...</span></div>
+          <div><strong>Toplam Kayıt:</strong> <span id="totalEntries">Yükleniyor...</span></div>
+          <div><strong>Son Giriş:</strong> <span id="lastLogin">Yükleniyor...</span></div>
+        </div>
+        <button onclick="logout()" class="cta-button" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">Çıkış Yap</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadProfileData();
+    });
+
+    async function loadProfileData() {
+  const token = localStorage.getItem("access_token");
+
+  try {
+    const res = await fetch("http://localhost:8000/users/me", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    if (!res.ok) throw new Error("Profil alınamadı");
+
+    const user = await res.json();
+
+    // Güncel verileri yerleştir
+    document.getElementById('userName').textContent = user.name;
+    document.getElementById('userEmail').textContent = user.email;
+    document.getElementById('userCreatedAt').textContent = MigrenApp.UIHelper.formatDate(new Date(user.created_at));
+
+    const entries = await MigrenApp.DataManager.getEntries();
+    document.getElementById('totalEntries').textContent = entries.length;
+
+    document.getElementById('lastLogin').textContent = 'Bugün';
+
+  } catch (err) {
+    console.error("Profil yüklenemedi:", err);
+    window.location.href = "login.html";
+  }
+}
+
+
+    function logout() {
+      if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
+        MigrenApp.UserManager.logout();
+        MigrenApp.UIHelper.showNotification('Çıkış yapıldı', 'info');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html> 

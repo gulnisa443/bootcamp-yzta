@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayarlar | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="settings-section">
+      <div class="settings-card">
+        <h1>Ayarlar</h1>
+        <form>
+          <label for="email">E-posta</label>
+          <input type="email" id="email" placeholder="E-posta adresiniz" required>
+          <label for="password">Şifre Değiştir</label>
+          <input type="password" id="password" placeholder="Yeni şifre">
+          <button type="submit" class="cta-button">Kaydet</button>
+        </form>
+      </div>
+    </section>
+  </main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const password = document.getElementById("password").value;
+    if (!password || password.length < 6) {
+      alert("Lütfen en az 6 karakterli bir şifre girin.");
+      return;
+    }
+
+    const token = localStorage.getItem("access_token");
+
+    try {
+      const res = await fetch("http://localhost:8000/users/me/password", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({ new_password: password })
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        alert("✅ Şifre başarıyla güncellendi.");
+        document.getElementById("password").value = "";
+      } else {
+        console.error("❌ API Hatası:", result);
+        alert("⚠️ Şifre güncellenemedi: " + (result.detail || result.message));
+      }
+
+    } catch (err) {
+      console.error("❌ Fetch hatası:", err);
+      alert("❌ Bağlantı hatası.");
+    }
+  });
+});
+</script>
+
+<script>
+  console.log("✅ Ayarlar sayfası JS yüklendi.");
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geçmiş | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="history-section">
+      <h1>Geçmiş Kayıtlar</h1>
+      <div class="history-grid" id="historyGrid">
+        <div class="loading">Kayıtlar yükleniyor...</div>
+      </div>
+      <div class="cta-center"><a href="panel.html" class="cta-button">Yeni Kayıt Ekle</a></div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadHistoryData();
+    });
+
+    function loadHistoryData() {
+  const token = localStorage.getItem("access_token");
+  const historyGrid = document.getElementById('historyGrid');
+  historyGrid.innerHTML = '<div class="loading">Kayıtlar yükleniyor...</div>';
+
+  axios.get("http://localhost:8000/entries/", {
+    headers: { Authorization: `Bearer ${token}` }
+  })
+  .then(response => {
+    const entries = response.data;
+
+    if (entries.length === 0) {
+      historyGrid.innerHTML = '<div class="no-data">Henüz kayıt bulunmuyor. <a href="panel.html">İlk kaydınızı oluşturun</a>.</div>';
+      return;
+    }
+
+    const sortedEntries = entries.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    const recentEntries = sortedEntries.slice(0, 10);
+
+    const historyHTML = recentEntries.map(entry => {
+  const date = MigrenApp.UIHelper.formatDate(entry.created_at);
+  const triggers = [];
+
+  if (entry.bright_light) triggers.push('Parlak Işık');
+  if (entry.irregular_meals) triggers.push('Düzensiz Beslenme');
+  if (entry.weather_change) triggers.push('Hava Değişikliği');
+
+  const triggerText = triggers.length > 0 ? triggers.join(', ') : 'Stres';
+
+  return `
+    <div class="history-card" id="entry-${entry.id}">
+      <span class="date">${date}</span>
+      <h3>Günlük Kayıt</h3>
+      <p><strong>Stres:</strong> ${entry.stress_level}/10</p>
+      <p><strong>Uyku:</strong> ${entry.sleep_duration} saat</p>
+      <p><strong>Su:</strong> ${entry.water_intake} litre</p>
+      <p><strong>Ekran:</strong> ${entry.screen_time} saat</p>
+      <p><strong>Tetikleyici:</strong> ${triggerText}</p>
+      ${entry.note ? `<p><strong>Not:</strong> ${entry.note}</p>` : ''}
+      <button onclick="deleteEntry(${entry.id})" class="delete-btn">Sil</button>
+    </div>
+  `;
+}).join('');
+
+
+
+    historyGrid.innerHTML = historyHTML;
+  })
+  .catch(error => {
+    console.error("Veri alınamadı:", error);
+    historyGrid.innerHTML = '<div class="error">Kayıtlar yüklenirken hata oluştu.</div>';
+  });
+}
+
+
+    async function deleteEntry(entryId) {
+  const confirmed = confirm("Bu kaydı silmek istediğinizden emin misiniz?");
+  if (!confirmed) return;
+
+  try {
+    await MigrenApp.DataManager.deleteEntry(entryId);
+
+    // DOM’dan ilgili kartı kaldır
+    const card = document.getElementById(`entry-${entryId}`);
+    if (card) {
+      card.remove();
+    }
+
+    MigrenApp.UIHelper.showNotification("Kayıt başarıyla silindi", "success");
+  } catch (error) {
+    MigrenApp.UIHelper.showNotification("Silme işlemi başarısız.", "error");
+    console.error("Silme hatası:", error);
+  }
+}
+
+  </script>
+</body>
+</html> 

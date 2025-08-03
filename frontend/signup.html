@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Ol | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+ 
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="signup-section">
+      <div class="signup-card">
+        <h1>Kayıt Ol</h1>
+        <form id="signupForm" onsubmit="handleSignup(event)">
+          <input type="text" name="name" placeholder="Ad Soyad" required>
+          <input type="email" name="email" placeholder="E-posta" required>
+          <input type="password" name="password" placeholder="Şifre" required minlength="6">
+          <button type="submit" class="cta-button">Kayıt Ol</button>
+        </form>
+        <a href="login.html" class="login-link">Zaten hesabın var mı? Giriş yap</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+    // ✅ Signup sonrası localStorage'a kullanıcı bilgisi yazma
+function handleSignup(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+
+  fetch('http://localhost:8000/auth/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: data.name, email: data.email, password: data.password })
+  })
+  .then(res => {
+    if (res.ok) {
+      MigrenApp.UserManager.setCurrentUser({
+        name: data.name,
+        email: data.email,
+        createdAt: new Date().toISOString()
+      });
+      MigrenApp.UIHelper.showNotification('Kayıt başarılı! Giriş yapabilirsiniz.', 'success');
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 1000);
+    } else {
+      return res.json().then(err => {
+        MigrenApp.UIHelper.showNotification(err.detail || 'Kayıt başarısız!', 'error');
+      });
+    }
+  })
+  .catch(() => {
+    MigrenApp.UIHelper.showNotification('Sunucuya bağlanılamadı!', 'error');
+  });
+}
+  </script>
+</body>
+</html> 

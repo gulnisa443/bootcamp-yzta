@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Günlük Giriş | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="panel-section">
+      <div class="panel-card">
+        <h1>Günlük Girişi</h1>
+        <form id="migrenForm" onsubmit="handleFormSubmit(event)">
+          <input type="number" min="0" max="24" step="0.1" placeholder="Uyku Süresi (saat)" name="uyku" required>
+          <input type="number" min="1" max="10" step="1" placeholder="Stres Seviyesi (1-10)" name="stres" required inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*">
+          <input type="number" min="0" max="10" step="0.1" placeholder="Su Tüketimi (litre)" name="su" required inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*">
+          <input type="number" min="0" max="24" step="0.1" placeholder="Ekran Süresi (saat)" name="ekran" required inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*">
+          <select name="ruhHali" required>
+            <option value="">Ruh Hali</option>
+            <option value="iyi">İyi</option>
+            <option value="orta">Orta</option>
+            <option value="kötü">Kötü</option>
+          </select>
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 18px 0 0 0;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 15px;"><input type="checkbox" name="isik"> Parlak ışığa maruz kaldım</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 15px;"><input type="checkbox" name="beslenme"> Beslenmem düzensizdi</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 15px;"><input type="checkbox" name="hava"> Hava değişikliği oldu</label>
+          </div>
+          <textarea rows="4" placeholder="Notlar (isteğe bağlı)" name="notlar"></textarea>
+          <button type="submit" class="cta-button">Kaydet</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+async function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+
+  data.isik = event.target.querySelector('input[name="isik"]').checked;
+  data.beslenme = event.target.querySelector('input[name="beslenme"]').checked;
+  data.hava = event.target.querySelector('input[name="hava"]').checked;
+
+  const validation = MigrenApp.FormValidator.validateMigrenForm(data);
+  if (!validation.isValid) {
+    MigrenApp.UIHelper.showNotification(validation.errors.join(', '), 'error');
+    return;
+  }
+
+  // ✅ Backend'e uygun isimlerle veri hazırla
+  const backendEntry = {
+    sleep_duration: parseFloat(data.uyku),
+    stress_level: parseInt(data.stres),
+    water_intake: parseFloat(data.su),
+    screen_time: parseFloat(data.ekran),
+    mood: data.ruhHali,
+    bright_light: data.isik,
+    irregular_meals: data.beslenme,
+    weather_change: data.hava,
+    note: data.notlar || null
+  };
+
+ // Veriyi kaydet
+await MigrenApp.DataManager.saveEntry(backendEntry);
+
+// ML risk tahmini al
+const mlResult = await MigrenApp.DataManager.predictRisk(backendEntry);
+console.log("ML sonucu:", mlResult);
+
+// Sonucu localStorage'a kaydet
+localStorage.setItem("ml_result", JSON.stringify(mlResult));
+
+MigrenApp.UIHelper.showNotification('Günlük girişiniz başarıyla kaydedildi!', 'success');
+
+// Sonuç sayfasına geç
+setTimeout(() => {
+  window.location.href = 'result.html';
+}, 1000);
+
+}
+
+  </script>
+</body>
+</html> 

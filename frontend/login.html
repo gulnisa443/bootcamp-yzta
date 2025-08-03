@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap | Yapay Zeka Destekli Migren Günlüğü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+  </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Migren Günlüğü</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="signup.html">Kayıt Ol</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="panel.html">Günlük Giriş</a></li>
+          <li><a href="gecmis.html">Geçmiş</a></li>
+          <li><a href="grafikler.html">Grafikler</a></li>
+          <li><a href="ayarlar.html">Ayarlar</a></li>
+          <li><a href="profile.html">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="login-section">
+      <div class="login-card">
+        <h1>Giriş Yap</h1>
+        <form id="loginForm" onsubmit="handleLogin(event)" autocomplete="on">
+          <input type="email" name="email" placeholder="E-posta" required autofocus>
+          <input type="password" name="password" placeholder="Şifre" required>
+          <button type="submit" class="cta-button">Giriş Yap</button>
+        </form>
+        <div class="signup-link">
+          Henüz hesabın yok mu? <a href="signup.html">Kayıt Ol</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+    // ✅ Login sonrası kullanıcı bilgilerini localStorage'a kaydetme
+function handleLogin(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+
+  fetch('http://localhost:8000/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: data.email, password: data.password })
+  })
+  .then(res => res.json())
+  .then(result => {
+    if (result.access_token) {
+      localStorage.setItem('access_token', result.access_token);
+      MigrenApp.UserManager.setCurrentUser({
+        name: data.email.split('@')[0],
+        email: data.email,
+        createdAt: new Date().toISOString()
+      });
+      MigrenApp.UIHelper.showNotification('Giriş başarılı!', 'success');
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1000);
+    } else {
+      MigrenApp.UIHelper.showNotification('E-posta veya şifre hatalı!', 'error');
+    }
+  })
+  .catch(() => {
+    MigrenApp.UIHelper.showNotification('Sunucuya bağlanılamadı!', 'error');
+  });
+}
+    
+
+    // Demo kullanıcı kodunu kaldırdım, artık localStorage'da kullanıcı tutulmuyor.
+  </script>
+</body>
+</html> 
