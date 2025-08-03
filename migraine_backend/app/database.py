@@ -1,20 +1,20 @@
 import os
 from dotenv import load_dotenv
 
-print("🔥 ENV yükleniyor...")
+print(" ENV yükleniyor...")
 
 # .env dosyasının yolunu elle belirle
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 
-print("📂 ENV PATH:", ENV_PATH)
+print(" ENV PATH:", ENV_PATH)
 
 # .env dosyasını yükle
 load_dotenv(dotenv_path=ENV_PATH)
 
 # Ortam değişkenini al
 DATABASE_URL = os.getenv("DATABASE_URL")
-print("🧪 DATABASE_URL:", DATABASE_URL)
+print(" DATABASE_URL:", DATABASE_URL)
 
 # SQLAlchemy için gerekli importlar
 from sqlalchemy import create_engine
