@@ -275,10 +275,20 @@ Sunum yapılacaksa +5 daha eklenebilir.
 Her ne kadar ekip 5 kişilik olsa da aktif çalışan 2 kişiyle bu puanlar verimlilik ve hedef odaklılıkla tamamlandı. Geri kalan takım üyeleri katkı sağlamadığı için bireysel dağılımda puanlar 2 kişiye eşit bölüştürülebilir:
 Kişi başı katkı: 50 puanlık iş.
 ## Daily Scrum
+Sprint boyunca ekip içi iletişim WhatsApp üzerinden sağlanmaya çalışıldı ancak düzenli ve etkili bir geri dönüş alınamadı. Bu durum, takım koordinasyonunu zorlaştırdı ve ilerlemenin takip edilmesini güçleştirdi. Aktif olarak çalışan iki ekip üyesi arasında temel bilgi paylaşımı ve görev güncellemeleri yapıldı ancak tüm ekip üyeleri sürece dahil olamadı.
+
+Bu nedenle günlük toplantılar (Daily Scrum) planlandığı gibi çevrimiçi sistematik şekilde yapılamadı.
 ## Sprint Board Ekran Görüntüleri
 
  ![Sprint 3 Panosu](./sprint3.png)
- 
+ ## Ürün Durumu
+Sprint 3’ün sonunda uygulama başarıyla tamamlanmıştır. Kullanıcının veri girişi yapabildiği frontend arayüzü, backend ile tam entegre çalışmakta ve girilen veriler doğrultusunda migren risk skoru hesaplanabilmektedir.
+
+Kullanıcı verileri, oluşturduğumuz rastgele veri setiyle eğitilen temel yapay zeka modeli üzerinden analiz edilmekte ve kişiselleştirilmiş risk tahminleri sunulmaktadır.
+
+Uygulama temel işlevselliğiyle çalışmakta olup, kullanıcı dostu tasarım, düzgün veri akışı ve puanlama sistemine sahiptir. Veri kaydı, risk hesaplama ve çıktı üretme özellikleri test edilerek doğrulanmıştır.
+
+Sonuç olarak, geliştirilen ürün; proje başında belirlenen temel işlevsel gereksinimleri karşılamakta ve ileriye dönük daha gelişmiş yapay zeka entegrasyonlarına da hazır bir altyapı sunmaktadır.
 ## Sprint Review
 Sprint 3, takım olarak hedeflediğimiz ürünün çekirdek bileşenlerini hayata geçirdiğimiz, en üretken ve teknik açıdan zorlu dönemlerden biri oldu. Sprintin başlangıcında takım 5 kişiden oluşmasına rağmen, sürecin neredeyse tamamı sadece 2 kişinin aktif katılımıyla yürütüldü. Diğer 3 takım üyesi, sprint boyunca hiçbir katkı sunmadı.
 
@@ -296,14 +306,6 @@ Bu çıktılar, ürünün temel işlevlerini ortaya koyarak MVP seviyesine ulaş
 
 Sprint sonunda hedeflenen tüm iş kalemleri tamamlandı ve toplam 100 puanlık işin tamamı başarıyla hayata geçirildi. Bu süreçte sadece 2 kişi aktif rol aldığı için bireysel katkı oldukça yüksekti.
 
-## Ürün Durumu
-Sprint 3’ün sonunda uygulama başarıyla tamamlanmıştır. Kullanıcının veri girişi yapabildiği frontend arayüzü, backend ile tam entegre çalışmakta ve girilen veriler doğrultusunda migren risk skoru hesaplanabilmektedir.
-
-Kullanıcı verileri, oluşturduğumuz rastgele veri setiyle eğitilen temel yapay zeka modeli üzerinden analiz edilmekte ve kişiselleştirilmiş risk tahminleri sunulmaktadır.
-
-Uygulama temel işlevselliğiyle çalışmakta olup, kullanıcı dostu tasarım, düzgün veri akışı ve puanlama sistemine sahiptir. Veri kaydı, risk hesaplama ve çıktı üretme özellikleri test edilerek doğrulanmıştır.
-
-Sonuç olarak, geliştirilen ürün; proje başında belirlenen temel işlevsel gereksinimleri karşılamakta ve ileriye dönük daha gelişmiş yapay zeka entegrasyonlarına da hazır bir altyapı sunmaktadır.
 ## Sprint Retrospective
 Bu sprintte ürünün işlevsel olarak tamamlanması sağlanmış olsa da, ekip içi katılım ve sorumluluk paylaşımı açısından ciddi dengesizlikler yaşandı. 5 kişilik ekipten yalnızca 2 kişi sprint boyunca aktif olarak çalışmalara katıldı. Tüm geliştirme, test ve entegrasyon süreçleri bu iki kişi tarafından yürütüldü. Bu durum, iş yükünün adaletsiz dağılmasına ve sprint sürecinin belirli üyeler üzerinde yoğunlaşmasına neden oldu.
 
