@@ -16,7 +16,7 @@ def generate_ml_enhanced_prompt(ml_context: Dict[str, Any]) -> str:
     risk_level = ml_pred.get("risk_level", "Bilinmeyen")
     
     return f"""
-🤖 GELIŞMIŞ MİGRAİN RİSK ANALİZİ
+ GELIŞMIŞ MİGRAİN RİSK ANALİZİ
 
 **ML Model Tahmini:**
 - Risk Skoru: {risk_score}/9
@@ -38,7 +38,7 @@ Bu gelişmiş ML analizi sonuçlarına göre:
 2. **Kısa Vadeli Öneriler** (bu hafta)
 3. **Uzun Vadeli Öneriler** (bu ay)
 
-{f"⚠️ YÜKSEK RİSK: Doktor konsültasyonu önerilir!" if risk_score >= 7 else ""}
+{f" YÜKSEK RİSK: Doktor konsültasyonu önerilir!" if risk_score >= 7 else ""}
 
 Her öneriyi kısa, net ve uygulanabilir şekilde ver. Emoji kullanabilirsin.
 """
@@ -56,7 +56,7 @@ def get_ml_enhanced_recommendations(ml_context: Dict[str, Any]) -> List[str]:
     except Exception as e:
         print(f"Gemini hatası: {e}")
         return [
-            "⚠️ AI önerileri şu anda alınamıyor.",
+            " AI önerileri şu anda alınamıyor.",
             "Temel öneriler: Bol su için, düzenli uyuyun, stresi azaltın."
         ]
 
