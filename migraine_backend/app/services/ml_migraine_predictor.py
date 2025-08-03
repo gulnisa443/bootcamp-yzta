@@ -26,12 +26,12 @@ class MLMigrainePredictionService:
                 self.model = joblib.load(model_file)
                 self.scaler = joblib.load(scaler_file)
                 self.model_loaded = True
-                logger.info("✅ ML modeli başarıyla yüklendi")
+                logger.info(" ML modeli başarıyla yüklendi")
             else:
-                logger.warning("⚠️ Eğitilmiş model bulunamadı. Önce modeli eğitin.")
+                logger.warning(" Eğitilmiş model bulunamadı. Önce modeli eğitin.")
                 
         except Exception as e:
-            logger.error(f"❌ Model yükleme hatası: {e}")
+            logger.error(f" Model yükleme hatası: {e}")
             self.model_loaded = False
     
     def safe_feature_engineering(self, df):
