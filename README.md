@@ -289,6 +289,11 @@ Kullanıcı verileri, oluşturduğumuz rastgele veri setiyle eğitilen temel yap
 Uygulama temel işlevselliğiyle çalışmakta olup, kullanıcı dostu tasarım, düzgün veri akışı ve puanlama sistemine sahiptir. Veri kaydı, risk hesaplama ve çıktı üretme özellikleri test edilerek doğrulanmıştır.
 
 Sonuç olarak, geliştirilen ürün; proje başında belirlenen temel işlevsel gereksinimleri karşılamakta ve ileriye dönük daha gelişmiş yapay zeka entegrasyonlarına da hazır bir altyapı sunmaktadır.
+<p align="center">
+  <img src="kayıt.jpeg" width="250"/>
+  <img src="dashboard.jpeg" width="250"/>
+  <img src="analiz.jpeg" width="250"/>
+</p>
 ## Sprint Review
 Sprint 3, takım olarak hedeflediğimiz ürünün çekirdek bileşenlerini hayata geçirdiğimiz, en üretken ve teknik açıdan zorlu dönemlerden biri oldu. Sprintin başlangıcında takım 5 kişiden oluşmasına rağmen, sürecin neredeyse tamamı sadece 2 kişinin aktif katılımıyla yürütüldü. Diğer 3 takım üyesi, sprint boyunca hiçbir katkı sunmadı.
 
