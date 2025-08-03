@@ -278,6 +278,9 @@ Kişi başı katkı: 50 puanlık iş.
 Sprint boyunca ekip içi iletişim WhatsApp üzerinden sağlanmaya çalışıldı ancak düzenli ve etkili bir geri dönüş alınamadı. Bu durum, takım koordinasyonunu zorlaştırdı ve ilerlemenin takip edilmesini güçleştirdi. Aktif olarak çalışan iki ekip üyesi arasında temel bilgi paylaşımı ve görev güncellemeleri yapıldı ancak tüm ekip üyeleri sürece dahil olamadı.
 
 Bu nedenle günlük toplantılar (Daily Scrum) planlandığı gibi çevrimiçi sistematik şekilde yapılamadı.
+
+ [Sprint 3 Daily Scrum Chat Dökümanı](https://docs.google.com/document/d/1cVGDbmo5rKh5-Rv5lZ8bQUpE_OjAC_h7S3hUODVuh4s/edit?usp=sharing)
+
 ## Sprint Board Ekran Görüntüleri
 
  ![Sprint 3 Panosu](./sprint3.png)
